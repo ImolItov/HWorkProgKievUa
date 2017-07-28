@@ -16,3 +16,20 @@ public class Lesson1a {
 
 	}
 }
+
+
+
+package Lesson;
+
+import java.util.Scanner;
+
+public class HomeWork {
+	public static void main(String[] args) {
+		Scanner round = new Scanner(System.in);
+		System.out.println("Введите значение радиуса = ");
+		double r = round.nextDouble();
+		double p = 2 * Math.PI * r;
+		System.out.println("Длинна окружности = " + p);
+	}
+
+}
