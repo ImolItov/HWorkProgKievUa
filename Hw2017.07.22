@@ -27,9 +27,9 @@ public class HomeWork {
 	public static void main(String[] args) {
 		Scanner round = new Scanner(System.in);
 		System.out.println("Введите значение радиуса = ");
-		double R = round.nextDouble();
-		double P = 2 * Math.PI * R;
-		System.out.println("Длинна окружности = " + P);
+		double r = round.nextDouble();
+		double p = 2 * Math.PI * r;
+		System.out.println("Длинна окружности = " + p);
 	}
 
 }
