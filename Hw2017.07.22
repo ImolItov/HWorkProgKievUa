@@ -6,13 +6,13 @@ public class Lesson1a {
 	public static void main(String[] args) {
 
 		Scanner delta = new Scanner(System.in);
-		System.out.println("Введите длинны сторон треугольника a, b, c ");
+		System.out.println("Enter the sides of the triangle a, b, c ");
 		double a = delta.nextDouble();
 		double b = delta.nextDouble();
 		double c = delta.nextDouble();
 		double p = (a + b + c) / 2;
 		double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-		System.out.println("Площадь треугольника = " + s);
+		System.out.println("Area of a triangle = " + s);
 
 	}
 }
