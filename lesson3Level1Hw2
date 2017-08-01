@@ -1,0 +1,49 @@
+import java.util.Scanner;
+    public class lesson3Level1Hw2 {
+        public static void main(String[] args) {
+
+System.out.println("№ кв: ");
+		Scanner sc = new Scanner(System.in);
+
+		int k = sc.nextInt();
+		if (!(k <= 0 || k > 144)) {
+
+			int z = 1; // "z" подъезд
+
+			if (k >= 1 && k <= 36) {
+			}
+			if (k >= 37 && k <= 72) {
+				z = 2;
+			}
+			if (k >= 73 && k <= 108) {
+				z = 3;
+			}
+			if (k >= 109 && k <= 144) {
+				z = 4;
+			}
+			System.out.println("подъезд " + z);
+			int n = 1; // "n" номер по счёту первой квартиры в подъезде
+			double s = 1; // "s" это квартира по счёту в этом подъезде
+			if (z == 1) {
+				s = (k - n) + 1;
+			}
+			if (z == 2) {
+				n = 37;
+				s = (k - n) + 1;
+			}
+			if (z == 3) {
+				n = 73;
+				s = (k - n) + 1;
+			}
+			if (z == 4) {
+				n = 109;
+				s = (k - n) + 1;
+			}
+			double e = s / 4;
+			System.out.println("Этаж " + Math.ceil(e));
+
+		} else {
+			System.out.println("такой квартиры нет, в этом доме");
+		}
+	}
+}
