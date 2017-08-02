@@ -1,47 +1,54 @@
 import java.util.Scanner;
-    public class lesson3Level1Hw2 {
-        public static void main(String[] args) {
+public class lesson3Level1Hw2 {
+	public static void main(String[] args) {
 
-System.out.println("№ кв: ");
+		System.out.println("№ кв: ");
 		Scanner sc = new Scanner(System.in);
 
-		int k = sc.nextInt();
-		if (!(k <= 0 || k > 144)) {
+		int apt = sc.nextInt();
+		if (!(apt <= 0 || apt > 144)) {
 
-			int z = 1; // "z" подъезд
+			int entry = 1; // "entry" подъезд
 
-			if (k >= 1 && k <= 36) {
+			if (apt >= 1 && apt <= 36) {
 			}
-			if (k >= 37 && k <= 72) {
-				z = 2;
+			if (apt >= 37 && apt <= 72) {
+				entry = 2;
 			}
-			if (k >= 73 && k <= 108) {
-				z = 3;
+			if (apt >= 73 && apt <= 108) {
+				entry = 3;
 			}
-			if (k >= 109 && k <= 144) {
-				z = 4;
+			if (apt >= 109 && apt <= 144) {
+				entry = 4;
 			}
-			System.out.println("подъезд " + z);
+			System.out.println("Подъезд " + entry);
 			int n = 1; // "n" номер по счёту первой квартиры в подъезде
-			double s = 1; // "s" это квартира по счёту в этом подъезде
-			if (z == 1) {
-				s = (k - n) + 1;
+			int aptN = 1; // "aptN" это квартира по счёту в этом подъезде
+			if (entry == 1) {
+				aptN = (apt - n) + 1;
 			}
-			if (z == 2) {
+			if (entry == 2) {
 				n = 37;
-				s = (k - n) + 1;
+				aptN = (apt - n) + 1;
 			}
-			if (z == 3) {
+			if (entry == 3) {
 				n = 73;
-				s = (k - n) + 1;
+				aptN = (apt - n) + 1;
 			}
-			if (z == 4) {
+			if (entry == 4) {
 				n = 109;
-				s = (k - n) + 1;
+				aptN = (apt - n) + 1;
 			}
-			double e = s / 4;
-			System.out.println("Этаж " + Math.ceil(e));
 
+			int integral = aptN / 4;
+			int excess = aptN % 4;
+
+			if (excess > 0) {
+				System.out.println("Этаж " + (integral + 1));
+
+			} else {
+				System.out.println("Этаж " + integral);
+			}
 		} else {
 			System.out.println("такой квартиры нет, в этом доме");
 		}
