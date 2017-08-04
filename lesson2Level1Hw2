@@ -1,8 +1,5 @@
-package Lesson;
-
 import java.util.Scanner;
-
-public class Lesson1a {
+public class lesson2Level1Hw2 {
 	public static void main(String[] args) {
 
 		Scanner delta = new Scanner(System.in);
@@ -13,6 +10,5 @@ public class Lesson1a {
 		double p = (a + b + c) / 2;
 		double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 		System.out.println("Area of a triangle = " + s);
-
 	}
 }
