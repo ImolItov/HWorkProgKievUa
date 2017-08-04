@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class lesson4Level1Hw1{
+	public static void main(String[] args) {
+System.out.println("input quantity column");
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int j;
+
+		for (int i = 1; i <= 7; i++) {
+			for (j = 1; j <= n; j++) {
+				int excess = j % 2;
+				if (excess > 0) {
+					System.out.print("***");
+				} else {
+					System.out.print("+++");
+				}
+			}
+			System.out.println();
+		}
+	}
+}
