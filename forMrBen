@@ -1,0 +1,32 @@
+package com.gmail.imolitov;
+
+import java.util.Arrays;
+
+public class mas {
+
+	public static void main(String[] args) {
+
+		int[] arr = new int[15];
+		int[] digits = new int[30];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = i; // заполняю arr
+		}
+
+		for (int i : arr) {
+			Arrays.fill(digits, i++); // копирую с arr в digits
+		}
+
+		for (int i = 15; i < 30; i++) {
+			digits[i] = arr[i] * 2; // заполняю digits удвоенными значениями arr начиная с 15-го индекса
+		}
+		System.out.println(Arrays.toString(digits));
+
+	}
+
+}    
+
+// в консоли выводится:
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
+	at com.gmail.imolitov.mas.main(mas.java:21)
