@@ -12,19 +12,21 @@ public class mas {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = i; // заполняю arr
 		}
+		System.out.println(Arrays.toString(arr));
 
-		for (int i : arr) {
-			Arrays.fill(digits, i++); // копирую с arr в digits
+		for (int i = 0; i < arr.length; i++) {
+			digits[i] = arr[i]; // копирую с arr в digits
 		}
+		System.out.println(Arrays.toString(digits));
 
-		for (int i = 15; i < 30; i++) {
+		for (int i = 0; i < digits.length; i++) {
 			digits[i] = arr[i] * 2; // заполняю digits удвоенными значениями arr начиная с 15-го индекса
 		}
 		System.out.println(Arrays.toString(digits));
 
 	}
 
-}    
+}   
 
 // в консоли выводится:
 
