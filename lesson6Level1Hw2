@@ -1,0 +1,15 @@
+public class Lesson6a {
+
+    public static void main(String[] args) {
+
+	int a = 5;
+	double b = 7.5;
+	String s = "Сумма = ";
+	System.out.println(sum(a, b, s));
+
+    }
+
+    public static String sum(int a, double b, String s) {
+	return s + (a + b);
+    }
+}
