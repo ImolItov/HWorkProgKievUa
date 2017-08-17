@@ -1,0 +1,23 @@
+public class Lesson6b {
+
+  public static void main(String[] args) {
+
+	int arr[] = { 0, 5, 2, 33, 44, 17, 3, 33 };
+	int key = 17;
+
+	System.out.println(indexOr(arr, key));
+    }
+
+    static int indexOr(int arr[], int key) {
+
+	for (int i : arr) {
+	    key = (key == i ? arr[i] : -1);
+	}
+	return key;
+    }
+
+}
+
+// Напишите метод который реализует линейный поиск элемента в массиве
+// целых чисел. Если такой элемент в массиве есть то верните его индекс,
+// если нет то метод должен возвращать число - «-1»
